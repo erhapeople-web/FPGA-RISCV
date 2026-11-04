@@ -1,0 +1,192 @@
+{
+  "passed": true,
+  "words": 16384,
+  "netlist_sha256": "ffce68e7ccd541d847dcf31ab0fe5880003731ead2a8501935991b258b21499a",
+  "firmware_binary_path": "E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\src\\firmware\\production.bin",
+  "firmware_hex_path": "E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\src\\firmware\\production.hex",
+  "firmware_binary_sha256": "415c3908b29f326b0dcef84cea0de3b1b6a12ba23627b1174d176ed6541fe945",
+  "firmware_hex_sha256": "eb3e16ed620ac12feacffa396c8bb5c47872ec3d2b1926a915a5a9b8600e80dd",
+  "active_firmware_init_sha256": "5ad83239a98d8eb48acce9f1a96a43acae641d038c8d29d59991a20be85b847d",
+  "active_build_report_sha256": "85fe48703459161dfb5c98206f167c4eabeca24518ae22f1ee0df1baa553cf33",
+  "input_hashes": {
+    "E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\src\\firmware\\production.hex": "eb3e16ed620ac12feacffa396c8bb5c47872ec3d2b1926a915a5a9b8600e80dd",
+    "E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\src\\firmware\\production.bin": "415c3908b29f326b0dcef84cea0de3b1b6a12ba23627b1174d176ed6541fe945",
+    "E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\src\\firmware\\firmware_init.vh": "5ad83239a98d8eb48acce9f1a96a43acae641d038c8d29d59991a20be85b847d",
+    "E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\identity.json": "85fe48703459161dfb5c98206f167c4eabeca24518ae22f1ee0df1baa553cf33",
+    "E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\verify_rom.py": "55b6cb99ef637277fb2046f0410e65093ec7461d276e27e4a2e50ba3884549ac"
+  },
+  "script_sha256": "55b6cb99ef637277fb2046f0410e65093ec7461d276e27e4a2e50ba3884549ac",
+  "testbench_sha256": "c13f27a5ac37f07dac9a5a5ccaf5057814f6b8eb86585ac1b18c1c2268908ebf",
+  "vvp_sha256": "822cb4505a6f1c222cc4c0afd0436bf55a80ed0dd153a7a67203170f9ddb91ce",
+  "log_sha256": "62f673ec4d57a70a75cbfb8f3ccdea4780caf9e0d5c21256d232488815d498b2",
+  "observation_map": {
+    "0": {
+      "port": "rdata",
+      "bit": 0,
+      "soc_connection": "mlrd[0]"
+    },
+    "1": {
+      "port": "rdata",
+      "bit": 1,
+      "soc_connection": "mlrd[1]"
+    },
+    "2": {
+      "port": "rdata",
+      "bit": 2,
+      "soc_connection": "mlrd[2]"
+    },
+    "3": {
+      "port": "rdata",
+      "bit": 3,
+      "soc_connection": "mlrd[3]"
+    },
+    "4": {
+      "port": "rdata",
+      "bit": 4,
+      "soc_connection": "mlrd[4]"
+    },
+    "5": {
+      "port": "rdata",
+      "bit": 5,
+      "soc_connection": "mlrd[5]"
+    },
+    "6": {
+      "port": "rdata",
+      "bit": 6,
+      "soc_connection": "mlrd[6]"
+    },
+    "7": {
+      "port": "rdata",
+      "bit": 7,
+      "soc_connection": "mlrd[7]"
+    },
+    "8": {
+      "port": "rdata",
+      "bit": 8,
+      "soc_connection": "mlrd[8]"
+    },
+    "9": {
+      "port": "rdata",
+      "bit": 9,
+      "soc_connection": "mlrd[9]"
+    },
+    "10": {
+      "port": "rdata",
+      "bit": 10,
+      "soc_connection": "mlrd[10]"
+    },
+    "11": {
+      "port": "rdata",
+      "bit": 11,
+      "soc_connection": "mlrd[11]"
+    },
+    "12": {
+      "port": "rdata",
+      "bit": 12,
+      "soc_connection": "mlrd[12]"
+    },
+    "13": {
+      "port": "rdata",
+      "bit": 13,
+      "soc_connection": "mlrd[13]"
+    },
+    "14": {
+      "port": "rdata",
+      "bit": 14,
+      "soc_connection": "mlrd[14]"
+    },
+    "15": {
+      "port": "rdata",
+      "bit": 15,
+      "soc_connection": "mlrd[15]"
+    },
+    "16": {
+      "port": "rdata",
+      "bit": 16,
+      "soc_connection": "mlrd[16]"
+    },
+    "17": {
+      "port": "rdata",
+      "bit": 17,
+      "soc_connection": "mlrd[17]"
+    },
+    "18": {
+      "port": "rdata",
+      "bit": 18,
+      "soc_connection": "mlrd[18]"
+    },
+    "19": {
+      "port": "rdata",
+      "bit": 19,
+      "soc_connection": "mlrd[19]"
+    },
+    "20": {
+      "port": "rdata",
+      "bit": 20,
+      "soc_connection": "mlrd[20]"
+    },
+    "21": {
+      "port": "rdata",
+      "bit": 21,
+      "soc_connection": "mlrd[21]"
+    },
+    "22": {
+      "port": "rdata",
+      "bit": 22,
+      "soc_connection": "mlrd[22]"
+    },
+    "23": {
+      "port": "rdata",
+      "bit": 23,
+      "soc_connection": "mlrd[23]"
+    },
+    "24": {
+      "port": "rdata",
+      "bit": 24,
+      "soc_connection": "mlrd[24]"
+    },
+    "25": {
+      "port": "rdata",
+      "bit": 25,
+      "soc_connection": "mlrd[25]"
+    },
+    "26": {
+      "port": "rdata",
+      "bit": 26,
+      "soc_connection": "mlrd[26]"
+    },
+    "27": {
+      "port": "rdata",
+      "bit": 27,
+      "soc_connection": "mlrd[27]"
+    },
+    "28": {
+      "port": "rdata",
+      "bit": 28,
+      "soc_connection": "mlrd[28]"
+    },
+    "29": {
+      "port": "rdata",
+      "bit": 29,
+      "soc_connection": "mlrd[29]"
+    },
+    "30": {
+      "port": "rdata",
+      "bit": 30,
+      "soc_connection": "mlrd[30]"
+    },
+    "31": {
+      "port": "rdata",
+      "bit": 31,
+      "soc_connection": "mlrd[31]"
+    }
+  },
+  "negative_check": {
+    "passed": true,
+    "mutation": "rom_0 INIT_00 bit 1 flipped in temporary netlist only",
+    "netlist_sha256": "b25af32a5b19c4b8163b669ae7d755a14002b563d3dd83a2af5e2970d85ed2b9",
+    "log_sha256": "c915e7b1c9ac7450c37dd8babfe7dbed37bba551d30dc64f9f2e65549169ff3d",
+    "detected_failure": "FATAL: E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\synth_rom\\tb_synth_rom.sv:235: ROM word 0 got=10010115 expected=10010117\n       Time: 86000  Scope: tb_synth_rom"
+  },
+  "scope": "Synthesized ROM and local-memory read mux/output registers; accept enable forced; not CPU or AXI gate-level validation"
+}

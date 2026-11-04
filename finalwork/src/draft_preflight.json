@@ -1,0 +1,12 @@
+{
+  "status": "DRAFT_DISABLED_NOT_FOR_PDS",
+  "design_sources": 108,
+  "missing": [],
+  "draft_pds_sha256": "6406a7de16fee1c47025f7f5b260f5585ecbaee87c4db61920255a417ef80100",
+  "requires": [
+    "CDC exact paths and timing exceptions",
+    "current source full gates and independent review",
+    "validated PDS pin/timing report",
+    "vendor DDR ordering and board verification"
+  ]
+}

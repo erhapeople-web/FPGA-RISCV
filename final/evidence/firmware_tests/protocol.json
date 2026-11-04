@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "cases": 27,
+  "assertions": 23361,
+  "source_sha256": {
+    "tests/firmware/test_protocol.c": "ddf7b6d0e1c34249525c80427e71331bf5a011060cb322f58841911ffc362db0",
+    "tests/firmware/app_bridge.c": "2098cc6a3d1763cbad55a38d6d6f26dc14c36a21a06528043cfb0bf1a6a3d127",
+    "firmware/source/camera_hooks.c": "788e5d154fed9ff29a3b3bca2261e971d546217a7a9ab022d9d22fec44b20a07",
+    "firmware/source/camera_hooks.h": "627eff66b13b82fa40cc7fe4e573703ce5a696b66e0158995d8f75cf18941ddf",
+    "firmware/source/legacy/board_rv32_application/common/app.c": "ccf717deeaf552a210a5164e5736f48e33505c0085b062343fca235aae3a596c",
+    "firmware/source/legacy/board_rv32_application/common/app.h": "b3ecdfbfeae1970ddd0050eefd7110ca9ea8f1ef22a9f8e34d95e08c1eeb5003",
+    "firmware/source/legacy/board_uart_loader/loader.c": "3312227177d6fa6955b596b552e4ed9cadbcc7c8728b72a8763cf96fd19340af",
+    "firmware/source/legacy/board_uart_loader/crypto.c": "ecb5e01d5a193a4c8e9c5f698fb7936dde7055dbe1e7ae41ee2dae2ef92d21af"
+  },
+  "executable_sha256": "f3f09777b1148c8a4a112139ffc4637324644fbb937665f4eb0de94cd7c16328",
+  "hardware_access": false,
+  "scope": "Actual camera hooks/application/loader with fake MMIO/DDR/graph/PP; no full graph or board claim"
+}

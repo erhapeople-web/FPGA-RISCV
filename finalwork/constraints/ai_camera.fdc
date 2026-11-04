@@ -1,0 +1,136 @@
+# Internal AI-camera CDC boundaries only. CPU100MHz/camera input/pixel37.125MHz.
+# 8ns bounds target ONLY the first D. Stage1-Q -> stage2-D remains normally timed.
+# Stable bundled payloads have an explicit15ns data bound and only async hold cut.
+# No clock-group cut, external DVP/HDMI/DDR IO delay, or RAM-wide exception.
+
+# CONTROL u_ai_camera/u_capture/cam_owned_meta: CPU ownership level; release cleanup must finish before reuse
+# Keep normal pair: u_ai_camera/u_capture/cam_owned_meta -> u_ai_camera/u_capture/cam_owned_sync (cam_pclk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_owned_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_owned_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/cam_req_meta: CPU capture request toggle
+# Keep normal pair: u_ai_camera/u_capture/cam_req_meta -> u_ai_camera/u_capture/cam_req_sync (cam_pclk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_req_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_req_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/cam_rel_meta: CPU cancellation/release generation
+# Keep normal pair: u_ai_camera/u_capture/cam_rel_meta -> u_ai_camera/u_capture/cam_rel_sync (cam_pclk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_rel_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_rel_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/pix_owned_meta: CPU ownership level into display participant
+# Keep normal pair: u_ai_camera/u_capture/pix_owned_meta -> u_ai_camera/u_capture/pix_owned_sync (pix_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_owned_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_owned_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/pix_req_meta: CPU operation identity into display participant
+# Keep normal pair: u_ai_camera/u_capture/pix_req_meta -> u_ai_camera/u_capture/pix_req_sync (pix_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_req_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_req_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/pix_rel_meta: CPU cancellation generation into display participant
+# Keep normal pair: u_ai_camera/u_capture/pix_rel_meta -> u_ai_camera/u_capture/pix_rel_sync (pix_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_rel_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_rel_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/pix_cam_valid_meta: Good full-frame completion before sampling held sequence
+# Keep normal pair: u_ai_camera/u_capture/pix_cam_valid_meta -> u_ai_camera/u_capture/pix_cam_valid_sync (pix_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cam_pclk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_cam_valid_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cam_pclk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_cam_valid_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/pix_cam_tag_meta: Camera completion operation tag
+# Keep normal pair: u_ai_camera/u_capture/pix_cam_tag_meta -> u_ai_camera/u_capture/pix_cam_tag_sync (pix_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cam_pclk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_cam_tag_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cam_pclk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_cam_tag_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/cam_valid_meta: Camera completion before CPU RAM reads
+# Keep normal pair: u_ai_camera/u_capture/cam_valid_meta -> u_ai_camera/u_capture/cam_valid_sync (cpu_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cam_pclk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_valid_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cam_pclk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_valid_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/cam_tag_meta: Camera completion operation tag into CPU
+# Keep normal pair: u_ai_camera/u_capture/cam_tag_meta -> u_ai_camera/u_capture/cam_tag_sync (cpu_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cam_pclk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_tag_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cam_pclk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_tag_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/pix_valid_meta: Exact displayed-frame lock acknowledgement
+# Keep normal pair: u_ai_camera/u_capture/pix_valid_meta -> u_ai_camera/u_capture/pix_valid_sync (cpu_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_valid_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_valid_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/pix_tag_meta: Displayed-frame operation tag into CPU
+# Keep normal pair: u_ai_camera/u_capture/pix_tag_meta -> u_ai_camera/u_capture/pix_tag_sync (cpu_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_tag_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_tag_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/pix_fault_meta: Held display frame/lock loss is a CPU-visible fault
+# Keep normal pair: u_ai_camera/u_capture/pix_fault_meta -> u_ai_camera/u_capture/pix_fault_sync (cpu_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_fault_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_fault_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/cam_ack_meta: Camera cancellation cleanup acknowledgement
+# Keep normal pair: u_ai_camera/u_capture/cam_ack_meta -> u_ai_camera/u_capture/cam_ack_sync (cpu_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cam_pclk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_ack_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cam_pclk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_ack_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_capture/pix_ack_meta: Pixel cancellation cleanup acknowledgement after stale camera valid clears
+# Keep normal pair: u_ai_camera/u_capture/pix_ack_meta -> u_ai_camera/u_capture/pix_ack_sync (cpu_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_ack_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_ack_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_osd/request_meta: OSD table commit request; shadow payload is frozen while busy
+# Keep normal pair: u_ai_camera/u_osd/request_meta -> u_ai_camera/u_osd/request_sync_q (pix_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/request_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks cpu_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/request_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/u_osd/ack_meta: OSD frame-boundary commit acknowledgement
+# Keep normal pair: u_ai_camera/u_osd/ack_meta -> u_ai_camera/u_osd/ack_sync_q (cpu_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/ack_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/ack_meta/D(\[[0-9:]+\])?$}]
+
+# CONTROL u_ai_camera/display_lock_meta: Synchronize display lock before CPU status readback
+# Keep normal pair: u_ai_camera/display_lock_meta -> u_ai_camera/display_lock_sync_q (cpu_clk).
+set_max_delay -datapath_only 8.000 -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/display_lock_meta/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_clocks pix_clk] -to [get_pins -hierarchical -regexp {^u_ai_camera/display_lock_meta/D(\[[0-9:]+\])?$}]
+
+# PAYLOAD u_ai_camera/u_capture/captured_seq -> u_ai_camera/u_capture/lock_seq: Captured sequence is held from full-frame completion until release; valid crosses two pixel FFs first
+set_max_delay -datapath_only 15.000 -from [get_cells -hierarchical -regexp {^u_ai_camera/u_capture/captured_seq(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/lock_seq(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_cells -hierarchical -regexp {^u_ai_camera/u_capture/captured_seq(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/lock_seq(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+
+# PAYLOAD u_ai_camera/u_capture/captured_seq -> u_ai_camera/u_capture/frame_seq: CPU latches held captured sequence only after camera and exact-frame pixel acknowledgements
+set_max_delay -datapath_only 15.000 -from [get_cells -hierarchical -regexp {^u_ai_camera/u_capture/captured_seq(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/frame_seq(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_cells -hierarchical -regexp {^u_ai_camera/u_capture/captured_seq(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/frame_seq(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+
+# PAYLOAD u_ai_camera/u_osd/shadow_xy1 -> u_ai_camera/u_osd/active_xy1: OSD shadow table cannot be written while busy; active table updates at frame boundary after two-FF request
+set_max_delay -datapath_only 15.000 -from [get_cells -hierarchical -regexp {^u_ai_camera/u_osd/shadow_xy1(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/active_xy1(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_cells -hierarchical -regexp {^u_ai_camera/u_osd/shadow_xy1(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/active_xy1(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+
+# PAYLOAD u_ai_camera/u_osd/shadow_xy2 -> u_ai_camera/u_osd/active_xy2: OSD shadow table cannot be written while busy; active table updates at frame boundary after two-FF request
+set_max_delay -datapath_only 15.000 -from [get_cells -hierarchical -regexp {^u_ai_camera/u_osd/shadow_xy2(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/active_xy2(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_cells -hierarchical -regexp {^u_ai_camera/u_osd/shadow_xy2(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/active_xy2(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+
+# PAYLOAD u_ai_camera/u_osd/shadow_meta -> u_ai_camera/u_osd/active_meta: OSD shadow table cannot be written while busy; active table updates at frame boundary after two-FF request
+set_max_delay -datapath_only 15.000 -from [get_cells -hierarchical -regexp {^u_ai_camera/u_osd/shadow_meta(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/active_meta(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_cells -hierarchical -regexp {^u_ai_camera/u_osd/shadow_meta(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/active_meta(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+
+# PAYLOAD u_ai_camera/u_osd/submitted_count -> u_ai_camera/u_osd/active_count: Count is committed with the table and held until pixel acknowledgement returns through two CPU FFs
+set_max_delay -datapath_only 15.000 -from [get_cells -hierarchical -regexp {^u_ai_camera/u_osd/submitted_count(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/active_count(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+set_false_path -hold -from [get_cells -hierarchical -regexp {^u_ai_camera/u_osd/submitted_count(\[[0-9:]+\])+$}] -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/active_count(\[[0-9:]+\])+/D(\[[0-9:]+\])?$}]
+
+# Dedicated reset-release FF asynchronous clear pins ONLY.
+# Their data cascade and all functional reset recovery/removal paths stay timed.
+set_false_path -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cpu_reset_meta/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cpu_reset_sync/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_reset_meta/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/cam_reset_sync/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_reset_meta/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_ai_camera/u_capture/pix_reset_sync/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/cpu_release_meta/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/cpu_release_sync_q/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/pix_release_meta/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_ai_camera/u_osd/pix_release_sync_q/C$}]
+
+# Video is active again. Restore the original J5_IO first-SDA-D boundaries.
+# Asynchronous pad inputs have no internal launch clock. No external data AC budget is invented.
+set_false_path -from [get_ports cam_sda] -to [get_pins -hierarchical -regexp {^u_config/u_camera_bus/sda_meta/D(\[[0-9:]+\])?$}]
+set_false_path -from [get_ports hdmi_sda] -to [get_pins -hierarchical -regexp {^u_config/u_hdmi_bus/sda_meta/D(\[[0-9:]+\])?$}]

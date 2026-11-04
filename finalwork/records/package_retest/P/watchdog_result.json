@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "fallback_reset_attempted": false,
+  "sram_clear_verified": true,
+  "normal_controller_cleanup": true,
+  "reason": null,
+  "notified_monotonic": null
+}

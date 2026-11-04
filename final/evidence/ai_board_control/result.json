@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "tests": 108,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Fake CFG/OT/UART/process/clock and synthetic-gate orchestration only; no board access",
+  "elapsed_seconds": 12.95,
+  "process_creation_prohibited": true,
+  "actual_hardware_access": false,
+  "actual_programs": 0,
+  "actual_UART_or_JTAG_connections": 0,
+  "runtime_dependencies": {
+    "E:\\study1\\FPGA\\branch\\J5_AI_CAMERA_BUGFIX_DISPLAY8S_20261102\\tools\\run_ai_camera_board.py": "87af15b9df951df26a235e2c3c26b19621b81ced23f5e60b98fbe33b1b4f739a",
+    "E:\\study1\\FPGA\\branch\\J5_AI_CAMERA_BUGFIX_DISPLAY8S_20261102\\host\\native_cfg.py": "c7ae928867b7cc968483624fe1b7cedd3eff9c3662a3430e1398387090e72725",
+    "E:\\study1\\FPGA\\branch\\J5_AI_CAMERA_BUGFIX_DISPLAY8S_20261102\\runtime\\board_support\\tools\\run_cpu_load_board.py": "da0527d3f835c7b86905fa303842a1e11141afc7987a197565524ed5280f8dbd",
+    "E:\\study1\\FPGA\\branch\\J5_AI_CAMERA_BUGFIX_DISPLAY8S_20261102\\runtime\\board_support\\host\\cpu_load_qualification.py": "fb4a3161aa49bc4b1125a86b1aa20dec07307449836545ee5d8ceae78a5373cb",
+    "E:\\study1\\FPGA\\branch\\J5_AI_CAMERA_BUGFIX_DISPLAY8S_20261102\\runtime\\board_support\\host\\native_cfg.py": "c7ae928867b7cc968483624fe1b7cedd3eff9c3662a3430e1398387090e72725",
+    "E:\\study1\\FPGA\\branch\\J5_AI_CAMERA_BUGFIX_DISPLAY8S_20261102\\host\\native_ot_observer.py": "e5fab347e4ad4bf8abe2646b9d4971ece188113a3935913a288f252822c44e35",
+    "E:\\study1\\FPGA\\branch\\J5_AI_CAMERA_BUGFIX_DISPLAY8S_20261102\\host\\native_client_lifecycle.py": "43d69c42f3f87f292758e3e3907c86ab31a577da148644056d9b966ff69ebf9e",
+    "E:\\study1\\FPGA\\branch\\J5_AI_CAMERA_BUGFIX_DISPLAY8S_20261102\\host\\native_server_lifecycle.py": "9baaf7425199574c38b9f6e18aa871845c80236e0f8e42d83d2dac98e375db56",
+    "D:\\FPGA2\\PDS_2022.2-SP6.4\\bin\\cdt_cfg_shell.exe": "8c7f1ee99a1fcad01214d1c5f330da49c1a52cf83f2a237e62cad68c38d2c54f",
+    "D:\\FPGA2\\PDS_2022.2-SP6.4\\bin\\cdt_js.exe": "46a0edb798df2aec07d184dd6a643953104032a4ad17e02adbed1c6464a57361"
+  },
+  "established_cases": 81,
+  "cleanup_lifecycle_cases": 27,
+  "source_sha256": {
+    "tools\\run_ai_camera_board.py": "87af15b9df951df26a235e2c3c26b19621b81ced23f5e60b98fbe33b1b4f739a",
+    "host\\native_cfg.py": "c7ae928867b7cc968483624fe1b7cedd3eff9c3662a3430e1398387090e72725",
+    "host\\native_ot_observer.py": "e5fab347e4ad4bf8abe2646b9d4971ece188113a3935913a288f252822c44e35",
+    "host\\native_client_lifecycle.py": "43d69c42f3f87f292758e3e3907c86ab31a577da148644056d9b966ff69ebf9e",
+    "host\\native_server_lifecycle.py": "9baaf7425199574c38b9f6e18aa871845c80236e0f8e42d83d2dac98e375db56",
+    "tests\\board_control\\test_ai_board_control.py": "dfc516069e5d2c1fde641d49753573b79ff74753000b2c6467719b7fee56748a",
+    "tests\\board_control\\test_cleanup_lifecycle.py": "3d9c36ee745a253637b39cbf4dd9f3f469c7e828b5d460c78b6323b5ca17eead",
+    "tests\\board_control\\run_tests.py": "ea68cdb1277a9262d05b4fbbd8b4cd79dbb13adf51ab378d70414e8434c15278"
+  },
+  "test_log_path": "E:\\study1\\FPGA\\branch\\J5_AI_CAMERA_BUGFIX_DISPLAY8S_20261102\\evidence\\ai_board_control\\tests.log",
+  "test_log_sha256": "e16cd06626aa24e58b8a7771d5a53196a921c42f7d02cb242f5220f0f5d735f8",
+  "python_executable": "D:\\Python\\Python314\\python.exe",
+  "python_version": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]"
+}

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "tests": 20,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Synthetic P/V CRC/nonce/transport and current pre-program UART capture/ownership/execution-state controls; no benchmark or device",
+  "process_creation_prohibited": true,
+  "hardware_access": false,
+  "coremark_algorithm_executed": false,
+  "source_sha256": {
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\host\\coremark_uart_parser.py": "ecc5913f828e22d335a8db270693621fce67f7a2eefda7f239011085fa513ff6",
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\host\\coremark_uart_case.py": "1d96f98e5ae60ad17ab9908386805a54d2eaf7358b0c4bdf6b112624b8a10a9d",
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\host\\coremark_workload.py": "82e0b589d73ff0db48f6f4af297bd7c9ce3e9446aa5aa28274256747474bf72a",
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\tools\\run_ai_camera_board.py": "ee656ec7253e8dc07557066dda09955ab343e7eb4218807770ebb4c7f83fe95a",
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\sim\\coremark_host\\run_tests.py": "ad2b526f0b3ec6c693e7307faf2e1bc1d0975e2cd7ddd861ab6216d296ca7349",
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\sim\\ai_board_control\\test_ai_board_control.py": "d94b718260cd7517ed0a015fdb1857ecddfef6906823ad8ea5aaa340d57fb71d",
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\sim\\coremark_host\\test_coremark_uart_case.py": "ae287b3e9545a03b3ae67de603d1fbff6c8488c5c6da1e2ffab43854b0226cdd",
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\sim\\coremark_host\\test_current_integration.py": "50dd2556a329ea80c85e5ff1e9c20058e4ef83fde390f9b331cbb8e51ab51c01"
+  },
+  "log_path": "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\evidence\\coremark_uart_tests\\tests.log",
+  "log_sha256": "9640b4109db51eecef84db506aa1a98109b9dae3d47425da0abfb6de4581d753"
+}

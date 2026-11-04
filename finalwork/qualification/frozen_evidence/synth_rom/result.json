@@ -1,0 +1,192 @@
+{
+  "passed": true,
+  "words": 16384,
+  "netlist_sha256": "4e07cbd42626d3a421b54a0bcb5c4f17747abef0fa26027b61394c64747641e1",
+  "firmware_binary_path": "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\src\\firmware\\production.bin",
+  "firmware_hex_path": "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\src\\firmware\\production.hex",
+  "firmware_binary_sha256": "f915be488b671606ba957bbf027760cee914ca120e5bbaac2c95e677ea00f6c3",
+  "firmware_hex_sha256": "0f2a30a3896706645c924090a977f6bd23620456fb722e6f37dc45ddad26e50e",
+  "active_firmware_init_sha256": "8aa19f3bee33963daf8aaf57f997bec7e028af94a418d66a30497364a7505a19",
+  "active_build_report_sha256": "d0585e2e8671c643c13814f5cbfefd42961dc1e351421677a4b35ab93cb1cf91",
+  "input_hashes": {
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\src\\firmware\\production.hex": "0f2a30a3896706645c924090a977f6bd23620456fb722e6f37dc45ddad26e50e",
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\src\\firmware\\production.bin": "f915be488b671606ba957bbf027760cee914ca120e5bbaac2c95e677ea00f6c3",
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\src\\firmware\\firmware_init.vh": "8aa19f3bee33963daf8aaf57f997bec7e028af94a418d66a30497364a7505a19",
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\identity.json": "d0585e2e8671c643c13814f5cbfefd42961dc1e351421677a4b35ab93cb1cf91",
+    "E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\verify_rom.py": "55b6cb99ef637277fb2046f0410e65093ec7461d276e27e4a2e50ba3884549ac"
+  },
+  "script_sha256": "55b6cb99ef637277fb2046f0410e65093ec7461d276e27e4a2e50ba3884549ac",
+  "testbench_sha256": "d581d7b882a9ffac508ff31d74c1e5e90ce535a8c772ae64d6f368aa2114c2c2",
+  "vvp_sha256": "3dac3576c0033e71a3dd5ed2363f100348d91d504e7122be4c2c6465bc98650f",
+  "log_sha256": "16a775e219817206257031b291047ea48b3570f0b97c987525e2c3fc6dfce348",
+  "observation_map": {
+    "0": {
+      "port": "rdata",
+      "bit": 0,
+      "soc_connection": "mlrd[0]"
+    },
+    "1": {
+      "port": "rdata",
+      "bit": 1,
+      "soc_connection": "mlrd[1]"
+    },
+    "2": {
+      "port": "rdata",
+      "bit": 2,
+      "soc_connection": "mlrd[2]"
+    },
+    "3": {
+      "port": "rdata",
+      "bit": 3,
+      "soc_connection": "mlrd[3]"
+    },
+    "4": {
+      "port": "rdata",
+      "bit": 4,
+      "soc_connection": "mlrd[4]"
+    },
+    "5": {
+      "port": "rdata",
+      "bit": 5,
+      "soc_connection": "mlrd[5]"
+    },
+    "6": {
+      "port": "rdata",
+      "bit": 6,
+      "soc_connection": "mlrd[6]"
+    },
+    "7": {
+      "port": "rdata",
+      "bit": 7,
+      "soc_connection": "mlrd[7]"
+    },
+    "8": {
+      "port": "rdata",
+      "bit": 8,
+      "soc_connection": "mlrd[8]"
+    },
+    "9": {
+      "port": "rdata",
+      "bit": 9,
+      "soc_connection": "mlrd[9]"
+    },
+    "10": {
+      "port": "rdata",
+      "bit": 10,
+      "soc_connection": "mlrd[10]"
+    },
+    "11": {
+      "port": "rdata",
+      "bit": 11,
+      "soc_connection": "mlrd[11]"
+    },
+    "12": {
+      "port": "rdata",
+      "bit": 12,
+      "soc_connection": "mlrd[12]"
+    },
+    "13": {
+      "port": "rdata",
+      "bit": 13,
+      "soc_connection": "mlrd[13]"
+    },
+    "14": {
+      "port": "rdata",
+      "bit": 14,
+      "soc_connection": "mlrd[14]"
+    },
+    "15": {
+      "port": "rdata",
+      "bit": 15,
+      "soc_connection": "mlrd[15]"
+    },
+    "16": {
+      "port": "rdata",
+      "bit": 16,
+      "soc_connection": "mlrd[16]"
+    },
+    "17": {
+      "port": "rdata",
+      "bit": 17,
+      "soc_connection": "mlrd[17]"
+    },
+    "18": {
+      "port": "rdata",
+      "bit": 18,
+      "soc_connection": "mlrd[18]"
+    },
+    "19": {
+      "port": "rdata",
+      "bit": 19,
+      "soc_connection": "mlrd[19]"
+    },
+    "20": {
+      "port": "rdata",
+      "bit": 20,
+      "soc_connection": "mlrd[20]"
+    },
+    "21": {
+      "port": "rdata",
+      "bit": 21,
+      "soc_connection": "mlrd[21]"
+    },
+    "22": {
+      "port": "rdata",
+      "bit": 22,
+      "soc_connection": "mlrd[22]"
+    },
+    "23": {
+      "port": "rdata",
+      "bit": 23,
+      "soc_connection": "mlrd[23]"
+    },
+    "24": {
+      "port": "rdata",
+      "bit": 24,
+      "soc_connection": "mlrd[24]"
+    },
+    "25": {
+      "port": "rdata",
+      "bit": 25,
+      "soc_connection": "mlrd[25]"
+    },
+    "26": {
+      "port": "rdata",
+      "bit": 26,
+      "soc_connection": "mlrd[26]"
+    },
+    "27": {
+      "port": "rdata",
+      "bit": 27,
+      "soc_connection": "mlrd[27]"
+    },
+    "28": {
+      "port": "rdata",
+      "bit": 28,
+      "soc_connection": "mlrd[28]"
+    },
+    "29": {
+      "port": "rdata",
+      "bit": 29,
+      "soc_connection": "mlrd[29]"
+    },
+    "30": {
+      "port": "rdata",
+      "bit": 30,
+      "soc_connection": "mlrd[30]"
+    },
+    "31": {
+      "port": "rdata",
+      "bit": 31,
+      "soc_connection": "mlrd[31]"
+    }
+  },
+  "negative_check": {
+    "passed": true,
+    "mutation": "rom_0 INIT_00 bit 1 flipped in temporary netlist only",
+    "netlist_sha256": "8407d212c0125b773d3a451126750792318560d827d631ebe9228c2e4794614a",
+    "log_sha256": "05c58b6084d1a9f6ad86137ace55171308c29ad61ef1c75f11b0cd5d3b3a97fb",
+    "detected_failure": "FATAL: E:\\study1\\FPGA\\test\\J5_AI_CAMERA_COREMARK_20261102\\synth_rom\\tb_synth_rom.sv:235: ROM word 0 got=10010115 expected=10010117\n       Time: 86000  Scope: tb_synth_rom"
+  },
+  "scope": "Synthesized ROM and local-memory read mux/output registers; accept enable forced; not CPU or AXI gate-level validation"
+}

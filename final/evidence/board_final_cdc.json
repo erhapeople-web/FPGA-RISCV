@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "scope": "Fresh current-DB guard/DDR/UART physical CDC/reset, AI camera reset/payload exception inventory and normal stage timing, synthesized presence. No external IO/MTBF claim.",
+  "routed_db_sha256": "0c03868b0921d122dc16f3f77cf4b5a227de600b9605937dea6c21d9f7c2404b",
+  "native_constraints_applied_verified": true,
+  "routed_stage_timing_verified": true,
+  "proof_sha256": {
+    "evidence/load_qualification/result.json": "9e70d6199eb7f08f4a7e29a35db037574e66758222cc0a7d53b705235267698d",
+    "evidence/ai_camera_cdc_preflight/native_result.json": "c7c840eaf519f5fee7d4d17f5ab15bba2078aa7de4445bdcdcfa263db78d6113",
+    "evidence/ai_camera_presence/result.json": "17808e638967efcb5f6ebda8bf736a6ef061a9cdb994b582b867d4b0bde2c890"
+  },
+  "hardware_access": false,
+  "external_IO_signed_off": false,
+  "MTBF_signed_off": false
+}

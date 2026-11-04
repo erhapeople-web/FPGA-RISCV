@@ -1,0 +1,9 @@
+# Architectural reset-domain crossing, not a functional data-path exception.
+# Global DDR reset is asynchronous to CPU clock. Its ONLY exempt destinations
+# are asynchronous clear pins of the two-stage local reset synchronizers.
+# PDS elaborated primitive names use C (mapped physical pins are named RS).
+# Their stage-0 Q -> stage-1 D paths and all local functional reset releases
+# remain timed. Never replace this pin exception by an all-cell/clock cut.
+# Both reset synchronizers exist in RTL; synthesis can merge their equivalent
+# launch registers under either hierarchy. Restrict sources to those two roots.
+set_false_path -from [get_cells -hierarchical {I_ips_ddr_top/u_ddrc_rstn_sync/sig_async_r* u_core_clk_rst_sync/sig_async_r*}] -to [get_pins -hierarchical {u_soc/u_ddr_path/mailbox/srst*/C u_soc/u_ddr_path/srst*/C}]

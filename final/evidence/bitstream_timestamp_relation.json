@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "scope": "Complete SBIT byte equality after masking only parsed header d time-of-generation field",
+  "frozen_path": "E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\bitstream\\test_ddr.sbit",
+  "frozen_sha256": "285aec775bdc79d0a025a380a7dea47d65213891d2f67d04f507f775cd1d99fb",
+  "rebuilt_path": "E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\pds\\generate_bitstream\\test_ddr.sbit",
+  "rebuilt_sha256": "b37832119171a6f8fd4d391ad77c8cf4b1699fb11c0d9f98ea025c89cde0c67a",
+  "time_field_range": [
+    93,
+    102
+  ],
+  "time_values": [
+    "15:39:04",
+    "18:11:10"
+  ],
+  "differing_bytes": 5,
+  "configuration_bytes_equal": true,
+  "source_hashes": {
+    "E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\bitstream\\test_ddr.sbit": "285aec775bdc79d0a025a380a7dea47d65213891d2f67d04f507f775cd1d99fb",
+    "E:\\study1\\FPGA\\handoff_verify\\J5_BUGFIX_BOARD_20261102_181530\\package\\pds\\generate_bitstream\\test_ddr.sbit": "b37832119171a6f8fd4d391ad77c8cf4b1699fb11c0d9f98ea025c89cde0c67a"
+  }
+}

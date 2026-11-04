@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "original_gate_sha256": "6de150b9c3da11e05e33dfb25ab487c2e2a5ad603b0cce35f040973a8c9c4fa5",
+  "original_identity_sha256": "d0585e2e8671c643c13814f5cbfefd42961dc1e351421677a4b35ab93cb1cf91",
+  "RTL_ROM_constraint_identity_unchanged": true,
+  "firmware_sha256": "f915be488b671606ba957bbf027760cee914ca120e5bbaac2c95e677ea00f6c3",
+  "bitstream_sha256": "94139808dc8e89ea3fd5758a559f101f1ed90ddaa50c26377b11b4a86d59c744",
+  "scope": "Exact original hardware proofs reused by source/artifact hashes; host path/port adapters independently regression-tested; no new routed-output or EEMBC certification claim",
+  "hardware_access": false
+}

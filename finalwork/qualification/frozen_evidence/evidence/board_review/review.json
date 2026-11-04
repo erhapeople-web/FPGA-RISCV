@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "scope": "Implementer review of current-SoC CoreMark test and startup/cleanup controls; actual board results separate",
+  "input_hashes": {
+    "identity.json": "d0585e2e8671c643c13814f5cbfefd42961dc1e351421677a4b35ab93cb1cf91",
+    "host/coremark_workload.py": "82e0b589d73ff0db48f6f4af297bd7c9ce3e9446aa5aa28274256747474bf72a",
+    "host/coremark_uart_parser.py": "ecc5913f828e22d335a8db270693621fce67f7a2eefda7f239011085fa513ff6",
+    "host/coremark_uart_case.py": "1d96f98e5ae60ad17ab9908386805a54d2eaf7358b0c4bdf6b112624b8a10a9d",
+    "tools/run_ai_camera_board.py": "ee656ec7253e8dc07557066dda09955ab343e7eb4218807770ebb4c7f83fe95a",
+    "tools/seal_ai_camera_gate.py": "2fac3369afa6cf20cff846e8f63b8adb72987843b87b0cd401737b10752bdee6"
+  },
+  "proof_sha256": {
+    "evidence/coremark_functional.json": "2dbc9f2eec9d12944dfc13b202093879c4be0404e6d16a1fec21e3465cc4b73a"
+  },
+  "blocking_findings": [],
+  "reviewed_points": [
+    "Only3ROM artifacts changed in src; all CPU/cache/AXI/MAC/video/guard RTL and FDC match the delivered AI hardware.",
+    "Official fixed upstream kernels, RV32I -O2,5000iterations,2KiB static SRAM; no M/C or MAC-assisted benchmark.",
+    "READY capture starts before programming. One CRC/nonce P/V command is sent only after Native program and protection checks.",
+    "Mode is part of exact child ownership; accepted BEGIN preserves execution truth even when later validation fails.",
+    "285s active/300s hardware, native OT/STOP/independent watchdog and exclusive-owner normal SRAM cleanup retained.",
+    "Both5k P/V durations and CRC must be validated on actual hardware; old R2 scores are not adopted."
+  ],
+  "review_attribution": {
+    "implementer_and_reviewer_same_agent": true,
+    "independent_review": false
+  },
+  "hardware_access": false
+}

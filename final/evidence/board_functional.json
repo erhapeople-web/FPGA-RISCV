@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "scope": "Current exact-source protocol fixes, production-ROM UART and load-guard checks; existing unchanged CPU/cache/AXI hardware. Not full ISA or new performance acceptance.",
+  "identity_sha256": "85fe48703459161dfb5c98206f167c4eabeca24518ae22f1ee0df1baa553cf33",
+  "firmware_binary_sha256": "415c3908b29f326b0dcef84cea0de3b1b6a12ba23627b1174d176ed6541fe945",
+  "proof_sha256": {
+    "evidence/firmware_tests/protocol.json": "922ea83b0a1197a01ef7d60cc98636d7dde4e05fe278b8c86c9d55ea6f944333",
+    "evidence/firmware_tests/negative_controls.json": "a7f8eea2fbd017328ae3b46442e82cb4edb9db72c8874eb2a25622c96548940f",
+    "evidence/firmware_tests/production_uart.json": "ec8d51adefa34c937e3aa710f2c2098c6f70bccfbff6e809a084633c3569440b",
+    "firmware/build/result.json": "091576c66d1e11fa322a96752f4c18d95b845970a9d754d317992013ec06f89c",
+    "evidence/load_guard_tests/result.json": "77c90b5802c03cea1e5eca73edce9e7309729c52f6f0c689b66541ec78d687d5"
+  },
+  "executed_source_binding": "Prior protocol/UART/build artifacts are retained with matching original-package source hashes; guard tests executed freshly in this board workcopy",
+  "hardware_access": false
+}

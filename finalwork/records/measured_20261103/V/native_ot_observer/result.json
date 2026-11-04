@@ -1,0 +1,82 @@
+{
+  "started_monotonic": 1150.4371519,
+  "sample_count": 3,
+  "ot_asserted_samples": 0,
+  "read_failures": 0,
+  "cancelled_reads": 0,
+  "accepted_samples": 3,
+  "attempts": 3,
+  "last_sample": {
+    "sequence": 2,
+    "label": "ot_poll_00002",
+    "started_monotonic": 1170.4526522,
+    "ended_monotonic": 1179.4177669,
+    "read_succeeded": true,
+    "accepted": true,
+    "raw": "0x001ffca0",
+    "over_temp": false,
+    "read_failed": false,
+    "cancelled": false,
+    "done": true,
+    "done_i": true,
+    "crc_error": false,
+    "id_error": false,
+    "mapping": "Logos2 Configuration Guide table16",
+    "log": "E:\\study1\\FPGA\\test\\board_runs\\20261103_131705_640774_9760dc62_coremark_V\\native\\ot_poll_00002\\command.log",
+    "log_sha256": "0584f812e2ddc2aa5e7db6fdb5a94ef7175032c0facba661d9612e68c474f2c0"
+  },
+  "fault": null,
+  "callback_error": null,
+  "period_seconds": 10.0,
+  "maximum_sample_age_seconds": 25.0,
+  "host_temperature_values_collected": false,
+  "ADC_or_JDRP_used": false,
+  "mapping": "Native Logos2 configuration status bit 27",
+  "stopped": {
+    "stopped": true,
+    "thread_stopped": true,
+    "native_clients_stopped": true,
+    "children": [
+      {
+        "label": "ot_poll_00000",
+        "stopped": true,
+        "pid": 38704,
+        "completion_verified": true,
+        "pid_reused": false,
+        "foreign_process_touched": false,
+        "returncode": 0,
+        "original_create_time": 1793683055.6949532,
+        "reason": "recorded_exit_and_process_absent"
+      },
+      {
+        "label": "ot_poll_00001",
+        "stopped": true,
+        "pid": 19012,
+        "completion_verified": true,
+        "pid_reused": false,
+        "foreign_process_touched": false,
+        "returncode": 0,
+        "original_create_time": 1793683065.7020197,
+        "reason": "recorded_exit_and_process_absent"
+      },
+      {
+        "label": "ot_poll_00002",
+        "stopped": true,
+        "pid": 38160,
+        "completion_verified": true,
+        "pid_reused": false,
+        "foreign_process_touched": false,
+        "returncode": 0,
+        "original_create_time": 1793683075.7130704,
+        "reason": "recorded_exit_and_process_absent"
+      }
+    ],
+    "sample_count": 3,
+    "fault": null,
+    "ever_ready": true,
+    "started": true,
+    "normal_completion_requested": true,
+    "natural_completion_verified": true,
+    "waited_seconds": 7.77644209999994
+  }
+}

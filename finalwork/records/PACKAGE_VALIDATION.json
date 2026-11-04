@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "created_local": "2026-11-03T13:50:29.445777",
+  "frozen_firmware_sha256": "f915be488b671606ba957bbf027760cee914ca120e5bbaac2c95e677ea00f6c3",
+  "frozen_bitstream_sha256": "94139808dc8e89ea3fd5758a559f101f1ed90ddaa50c26377b11b4a86d59c744",
+  "source_id": "07b7f5a7855dc267d61c692e69655f4c89158117461adfc2f6d55c9cbce16e47",
+  "hardware_source_identity_unchanged": true,
+  "host_changes": "Relocatable package/tool/run paths and explicit CP210x COM port only",
+  "migrated_offline_tests": {
+    "ai_board_control": 106,
+    "coremark_uart_tests": 20,
+    "portable_port_tests": 3
+  },
+  "package_negative_checks": {
+    "passed": true,
+    "bitstream_single_bit_tamper_rejected": true,
+    "different_native_tools_rejected_before_device": true,
+    "hardware_access": false
+  },
+  "firmware_rebuild": {
+    "passed": true,
+    "all_four_artifacts_byte_identical": true,
+    "source_id": "07b7f5a7855dc267d61c692e69655f4c89158117461adfc2f6d55c9cbce16e47",
+    "work": "E:\\study1\\FPGA\\branch\\J5_CM2506\\build\\firmware_20261103_134135",
+    "files": {
+      "firmware.bin": "f915be488b671606ba957bbf027760cee914ca120e5bbaac2c95e677ea00f6c3",
+      "firmware.hex": "0f2a30a3896706645c924090a977f6bd23620456fb722e6f37dc45ddad26e50e",
+      "firmware_init.vh": "8aa19f3bee33963daf8aaf57f997bec7e028af94a418d66a30497364a7505a19",
+      "firmware.elf": "0db9e8721f6c0f277a2121abdfd73af61baebe66e9e790e4d7640a84c3b42181"
+    },
+    "hardware_access": false,
+    "benchmark_executed": false,
+    "frozen_runtime_files_replaced": false
+  },
+  "independent_extraction": {
+    "passed": true,
+    "root": "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506",
+    "archive": "E:\\study1\\FPGA\\handoff_verify\\CM2506_PACKAGE_20261103_133602\\pre_release.zip",
+    "files": 292,
+    "all_extracted_hashes_verified": true,
+    "setup_passed": true,
+    "provided_compile_entry_passed": true,
+    "compile_result": {
+      "passed": true,
+      "compile_only": true,
+      "work_directory": "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\build\\pds_20261103_134458",
+      "hardware_access": false,
+      "frozen_runtime_bitstream_replaced": false
+    },
+    "hardware_access": false
+  },
+  "actual_extracted_PV_runs": [
+    {
+      "passed": true,
+      "mode": "P",
+      "board_run": "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P",
+      "source_id": "07b7f5a7855dc267d61c692e69655f4c89158117461adfc2f6d55c9cbce16e47",
+      "bitstream_sha256": "94139808dc8e89ea3fd5758a559f101f1ed90ddaa50c26377b11b4a86d59c744",
+      "firmware_binary_sha256": "f915be488b671606ba957bbf027760cee914ca120e5bbaac2c95e677ea00f6c3",
+      "iterations": 5000,
+      "clock_hz": 100000000,
+      "cycles": 1995110503,
+      "seconds": 19.95110503,
+      "coremark": 250.61268498569976,
+      "coremark_per_mhz": 2.5061268498569977,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "bd59"
+      },
+      "all_kernel_and_final_CRC_independent_5000_reference_checked": true,
+      "cache_counters": {
+        "ic_access": 1261369559,
+        "ic_miss": 814,
+        "dc_access": 474990196,
+        "dc_miss": 400197
+      },
+      "cache_counter_scope": "Cumulative from cold reset through post-result counter read; includes boot, command wait, initialization and UART output, not an isolated timed-kernel window",
+      "OT_samples": 3,
+      "OT_asserted_samples": 0,
+      "sram_clear_verified": true,
+      "clear_status": "0x00180c80",
+      "normal_cleanup": true,
+      "native_server_closed": true,
+      "source_run_hashes": {
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\wrapper_result.json": "df712ee5d7e0cf72030a2417dde5435bfa5e147ce85a5664dd7941707144ada4",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\controller_result.json": "75ecc9490b0a3822079d5cc5f450126d6b8a565c212a60fdbe0a10f2782c09fc",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\watchdog_result.json": "2ed1b95d369901c7fefe3b0c5eff1ec6102c8416403c1f8a094b0f9d29ce3a66",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\input_binding.json": "7c896e5a459cc776921c186b95917c60e5ebd9a18e9a46882b65fb5c9313ebc2",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\application_result.json": "940ae52a227370443a067ba28908f71f673875c51d2d07a529927933dfb1232e",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\application\\result.json": "a1cb9bd3614d7f6623685e7258c05d960e4b3902635bf7c9bc958c367d42586d",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\application\\uart_tx.bin": "509a4ae309e58c54139c7eeaa7d448bd0a08364f6540c8955b5afacfc86f5c8f",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\application\\uart_rx.bin": "147fb0a672192b6ac03a526434dd94a09833e2a4e903892625235c551e6a443e",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\raw_tx.bin": "509a4ae309e58c54139c7eeaa7d448bd0a08364f6540c8955b5afacfc86f5c8f",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\raw_rx.bin": "147fb0a672192b6ac03a526434dd94a09833e2a4e903892625235c551e6a443e",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\native_ot_observer\\result.json": "9cea0b9ebc6cfea92e4d63114532344008f470b1b64e7290064ae2aade5f0ddc",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134621_808264_27c53cfc_coremark_P\\native_ot_observer\\samples.jsonl": "ff731ec6223af2a17a5a527cbfadf59391524e0d4d1cf5af50d89b0c16dd9f12"
+      },
+      "cycles_match_measured_reference": true,
+      "coremark_per_LUT": 0.010569915014158573,
+      "wrapper_sha256": "df712ee5d7e0cf72030a2417dde5435bfa5e147ce85a5664dd7941707144ada4"
+    },
+    {
+      "passed": true,
+      "mode": "V",
+      "board_run": "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V",
+      "source_id": "07b7f5a7855dc267d61c692e69655f4c89158117461adfc2f6d55c9cbce16e47",
+      "bitstream_sha256": "94139808dc8e89ea3fd5758a559f101f1ed90ddaa50c26377b11b4a86d59c744",
+      "firmware_binary_sha256": "f915be488b671606ba957bbf027760cee914ca120e5bbaac2c95e677ea00f6c3",
+      "iterations": 5000,
+      "clock_hz": 100000000,
+      "cycles": 2077410668,
+      "seconds": 20.77410668,
+      "coremark": 240.6842362475054,
+      "coremark_per_mhz": 2.406842362475054,
+      "crc": {
+        "seedcrc": "18f2",
+        "crclist": "e3c1",
+        "crcmatrix": "0747",
+        "crcstate": "8d84",
+        "crcfinal": "f440"
+      },
+      "all_kernel_and_final_CRC_independent_5000_reference_checked": true,
+      "cache_counters": {
+        "ic_access": 1278751873,
+        "ic_miss": 818,
+        "dc_access": 462846778,
+        "dc_miss": 421459
+      },
+      "cache_counter_scope": "Cumulative from cold reset through post-result counter read; includes boot, command wait, initialization and UART output, not an isolated timed-kernel window",
+      "OT_samples": 3,
+      "OT_asserted_samples": 0,
+      "sram_clear_verified": true,
+      "clear_status": "0x00180c80",
+      "normal_cleanup": true,
+      "native_server_closed": true,
+      "source_run_hashes": {
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\wrapper_result.json": "8bdf0c1fce36948eb04180f3a9a8d99fd142d752e2c615334ed025231cb02249",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\controller_result.json": "6ee8da2dc7529a344cd31b936147bae2604b46aac7599597d2c9c2f4af4b7c3e",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\watchdog_result.json": "2ed1b95d369901c7fefe3b0c5eff1ec6102c8416403c1f8a094b0f9d29ce3a66",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\input_binding.json": "896dd6cc53fba8d533587e7de799b64e9842da6711b8a0ee6501c829aacce65d",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\application_result.json": "8322079bb26177c92ebb4d4e08a1d5efb56b78a6d846407845e2a40af7e9afb1",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\application\\result.json": "a098926f9205794d1b333a89a61eb95e1c3c15efcd047cd38fb528f11eae42bc",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\application\\uart_tx.bin": "1e106c85e73b64d8a22f703feaf46583c87ced28adb9a25c5a977d9bffe67027",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\application\\uart_rx.bin": "5961af56b02d43d6d89d0c9197d1569e8dbc58d7fd5d253b4c7946963759c163",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\raw_tx.bin": "1e106c85e73b64d8a22f703feaf46583c87ced28adb9a25c5a977d9bffe67027",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\raw_rx.bin": "5961af56b02d43d6d89d0c9197d1569e8dbc58d7fd5d253b4c7946963759c163",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\native_ot_observer\\result.json": "fd4156911b8eab8bd9917db4f7dc3412e8dc68e50b3ed468b4258489ce0dbe1b",
+        "E:\\study1\\FPGA\\test\\CM26V_134450\\J5_CM2506\\runs\\20261103_134731_420974_ca10fabd_coremark_V\\native_ot_observer\\samples.jsonl": "0bf610d93b47977327e59317c9e2edd6ad77757b22c43d28f2962714b7ff485c"
+      },
+      "cycles_match_measured_reference": true,
+      "coremark_per_LUT": 0.010151169812210266,
+      "wrapper_sha256": "8bdf0c1fce36948eb04180f3a9a8d99fd142d752e2c615334ed025231cb02249"
+    }
+  ],
+  "reference_cycles_reproduced_exactly": true,
+  "scope": "Exact 2.506126850/2.406842362 image and source reproduction; current package startup and P/V commands physically reverified; no new routed hardware build or strict EEMBC certification claim"
+}

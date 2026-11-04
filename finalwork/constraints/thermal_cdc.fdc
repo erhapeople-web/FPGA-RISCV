@@ -1,0 +1,36 @@
+# New diagnostic logic: all functional paths retain the original 100 MHz model.
+# Free-clock ADC/UART logic uses the same established 27 MHz source.
+set_clock_uncertainty -setup 0.500 [get_clocks free_clk]
+set_clock_uncertainty -hold 0.200 [get_clocks free_clk]
+
+# Two-flop asynchronous level/toggle crossings. Bounds are no longer than one
+# destination cycle: 10 ns at 100 MHz and 37 ns at 27 MHz. Only the first stage
+# has asynchronous hold semantics; every first-Q -> second-D path stays timed.
+set_max_delay -datapath_only 10.000 -from [get_clocks free_clk] -to [get_cells -hierarchical {u_thermal_stage/measurement_meta u_thermal_stage/ot_meta u_thermal_context/request_meta}]
+set_false_path -hold -from [get_clocks free_clk] -to [get_cells -hierarchical {u_thermal_stage/measurement_meta u_thermal_stage/ot_meta u_thermal_context/request_meta}]
+set_max_delay -datapath_only 10.000 -from [get_cells -hierarchical {I_ips_ddr_top/u_ddrphy_top/ddrphy_dfi/dfi_init_complete*}] -to [get_cells -hierarchical {u_thermal_stage/ddr_meta}]
+set_false_path -hold -from [get_cells -hierarchical {I_ips_ddr_top/u_ddrphy_top/ddrphy_dfi/dfi_init_complete*}] -to [get_cells -hierarchical {u_thermal_stage/ddr_meta}]
+set_max_delay -datapath_only 37.000 -from [get_clocks cpu_clk] -to [get_cells -hierarchical {u_thermal_context/ack_meta u_thermal_context/src_ready_meta}]
+set_false_path -hold -from [get_clocks cpu_clk] -to [get_cells -hierarchical {u_thermal_context/ack_meta u_thermal_context/src_ready_meta}]
+
+# Bundled-data mailbox: held_data remains stable through request/acknowledge,
+# two acknowledgement synchronizer edges and an extra destination settle edge.
+# Destination captures the complete word before sending another request.
+set_max_delay -datapath_only 37.000 -from [get_cells -hierarchical -regexp {^u_thermal_context/held_data.*}] -to [get_cells -hierarchical -regexp {^u_thermal_context/dst_value.*}]
+set_false_path -hold -from [get_cells -hierarchical -regexp {^u_thermal_context/held_data.*}] -to [get_cells -hierarchical -regexp {^u_thermal_context/dst_value.*}]
+
+# Qualify asynchronous reset release locally. Exempt only the asynchronous
+# control pins of the eight dedicated release flops, not functional reset loads.
+set_false_path -to [get_pins -hierarchical {g_thermal_cpu_reset/cpu_release_meta/C g_thermal_cpu_reset/cpu_release_sync_q/C u_thermal_stage/stage_reset_meta/C u_thermal_stage/stage_reset_sync_q/C u_thermal_context/src_release_meta/C u_thermal_context/src_release_q/C u_thermal_context/dst_release_meta/C u_thermal_context/dst_release_q/C}]
+
+# Raw CPU-domain DDR permission still starts the PLL chain asynchronously.
+# Only dedicated reset-release C pins are exempt: two new dps_clk release FFs
+# plus the two existing two-stage DDR/core reset synchronizers. Each expression
+# must resolve to exactly one C pin. All first-Q -> second-D and local-release
+# -> phase-adjustment functional recovery/removal paths remain timed.
+set_false_path -to [get_pins -hierarchical -regexp {^I_ips_ddr_top/u_ddrphy_top/u_phase_adj_reset_release/release_meta/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^I_ips_ddr_top/u_ddrphy_top/u_phase_adj_reset_release/release_sync_q/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_core_clk_rst_sync/sig_async_r1\[0\]/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_core_clk_rst_sync/sig_async_r2\[0\]/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^I_ips_ddr_top/u_ddrc_rstn_sync/sig_async_r1\[0\]/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^I_ips_ddr_top/u_ddrc_rstn_sync/sig_async_r2\[0\]/C$}]

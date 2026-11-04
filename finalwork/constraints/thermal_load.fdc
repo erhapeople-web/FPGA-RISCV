@@ -1,0 +1,21 @@
+# Exclusive-JDRP load image; 27MHz load guard and original100MHz CPU.
+set_clock_uncertainty -setup 0.500 [get_clocks free_clk]
+set_clock_uncertainty -hold 0.200 [get_clocks free_clk]
+
+# Dedicated local asynchronous reset-release boundaries ONLY. First-Q to
+# second-D and every local functional reset recovery/removal path stay timed.
+set_false_path -to [get_pins -hierarchical {g_thermal_cpu_reset/cpu_release_meta/C g_thermal_cpu_reset/cpu_release_sync_q/C}]
+set_false_path -to [get_pins -hierarchical {g_load_thermal/u_load_monitor/u_guard/reset_meta/C g_load_thermal/u_load_monitor/u_guard/reset_sync_q/C}]
+
+# Preserve the previously proved DDR PLL startup path and phase_adj release.
+set_false_path -to [get_pins -hierarchical -regexp {^I_ips_ddr_top/u_ddrphy_top/u_phase_adj_reset_release/release_meta/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^I_ips_ddr_top/u_ddrphy_top/u_phase_adj_reset_release/release_sync_q/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_core_clk_rst_sync/sig_async_r1\[0\]/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^u_core_clk_rst_sync/sig_async_r2\[0\]/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^I_ips_ddr_top/u_ddrc_rstn_sync/sig_async_r1\[0\]/C$}]
+set_false_path -to [get_pins -hierarchical -regexp {^I_ips_ddr_top/u_ddrc_rstn_sync/sig_async_r2\[0\]/C$}]
+
+# Raw ALARM0/OT/DONE ADC pins have no modeled launch-clock STA source.
+# No clock-group/functional reset/whole synchronizer cut is added for them.
+# Their three physical two-FF chains and private first-Q fanout require a fresh
+# routed structural audit; absence of raw-input STA paths is NOT a timing pass.

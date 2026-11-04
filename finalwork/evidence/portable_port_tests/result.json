@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "tests": 3,
+  "failures": 0,
+  "errors": 0,
+  "process_creation_prohibited": true,
+  "hardware_access": false,
+  "source_sha256": {
+    "sim\\coremark_host\\test_portable_port.py": "0239db19276d076a1fc4ef08adc62c9ed2529a8abbaead96015a7af8068f738f",
+    "sim\\coremark_host\\run_portable_tests.py": "9b5dbd058e56df4746c153252071d7bfe04cf1515ceaffb49a28c2fcc465bab0",
+    "tools\\run_ai_camera_board.py": "a0c4bbc67e4d5f3e5dd941f3e90df9542710f249eaa15d9ebe193c6e75d7b64d"
+  }
+}

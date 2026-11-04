@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "source": "FPGA on-chip sampling read through COM8",
+  "uart_sha256": "700b03431b45de2605a2c5dd884638e5af0044f120a197a79e35adecff8ca937",
+  "verified_result_sha256": "5e22998ddcc681c8eed48ea938771a68fcdc34690630e323ca4d73532b416471",
+  "scores": {
+    "passed": true,
+    "mode": "P",
+    "board_run": "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P",
+    "source_id": "83cd56c3db2411b72022d3cf21dca7295ae10652872265512ebd7280c1cfa85d",
+    "bitstream_sha256": "2674711e2a8e7f27f76b1f7e5b042c2ec8505dc8d93f8242d1c3b6ba9fa28a13",
+    "firmware_binary_sha256": "2cf2020094a95b78c6710d166c051fd946bcc04d8014bbfc14b375a297b2a077",
+    "iterations": 5000,
+    "clock_hz": 100000000,
+    "cycles": 1996907803,
+    "seconds": 19.96907803,
+    "coremark": 250.38712315553008,
+    "coremark_per_mhz": 2.503871231555301,
+    "crc": {
+      "seedcrc": "e9f5",
+      "crclist": "e714",
+      "crcmatrix": "1fd7",
+      "crcstate": "8e3a",
+      "crcfinal": "bd59"
+    },
+    "all_kernel_and_final_CRC_independent_5000_reference_checked": true,
+    "cache_counters": {
+      "ic_access": 1246208445,
+      "ic_miss": 821,
+      "dc_access": 467409506,
+      "dc_miss": 575509
+    },
+    "cache_counter_scope": "Cumulative from cold reset through post-result counter read; includes boot, command wait, initialization and UART output, not an isolated timed-kernel window",
+    "OT_samples": 3,
+    "OT_asserted_samples": 0,
+    "sram_clear_verified": true,
+    "clear_status": "0x00180c80",
+    "normal_cleanup": true,
+    "native_server_closed": true,
+    "source_run_hashes": {
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\wrapper_result.json": "7ddae1d0dcee5eccc9022f20e179e57f409b48950f94166614e7b84268939d9a",
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\controller_result.json": "048d2df8e48dca43657ae2368bb8256faacbd187a0e81b6816c64c754a9119ce",
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\watchdog_result.json": "2ed1b95d369901c7fefe3b0c5eff1ec6102c8416403c1f8a094b0f9d29ce3a66",
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\input_binding.json": "4bbd4834d27dcbae6322b082e45d65e5864a5d56b57ff57e19c6d8cc8c26e8b0",
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\application_result.json": "e82e57c376047b4d99ccd7d2941d2bc3fb70e36d43e63043c6733e3bc2ccbd74",
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\application\\result.json": "958600fec585501b349d9c5f925b705f3754d62c6459a7044c04b3451f936441",
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\application\\uart_tx.bin": "e7e4df081308fd526ecf6425d8556a89edc9afb9c3e9c5d64eb49c180ee8e2f3",
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\application\\uart_rx.bin": "700b03431b45de2605a2c5dd884638e5af0044f120a197a79e35adecff8ca937",
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\raw_tx.bin": "e7e4df081308fd526ecf6425d8556a89edc9afb9c3e9c5d64eb49c180ee8e2f3",
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\raw_rx.bin": "700b03431b45de2605a2c5dd884638e5af0044f120a197a79e35adecff8ca937",
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\native_ot_observer\\result.json": "2ce80dcb1f51bb0f24bbd82bc26d0d1744c43460f73c8e539e6f65fffcf631e5",
+      "F:\\FPGA_RISCV\\finalwork_report_20261103_135617\\wave_project\\runs\\20261103_143107_315035_498938bd_coremark_P\\native_ot_observer\\samples.jsonl": "5c218b75a3b494c21ae2ad22e13fc8f1d3a18e7dc5196750a69f95249591bf81"
+    },
+    "cycles_match_measured_reference": false,
+    "scope": "Instrumented capture image; independent of frozen scoring results"
+  },
+  "windows": [
+    {
+      "algorithm": "core_bench_list",
+      "trigger_pc": "0xcf4",
+      "samples": 128,
+      "retired": 33,
+      "ipc": 0.2578125,
+      "cpi": 3.878787878787879,
+      "load_dependency": 4,
+      "mem_wait": 42,
+      "branch_redirect": 5,
+      "data_req": 8,
+      "data_resp": 9
+    },
+    {
+      "algorithm": "matrix_mul_matrix",
+      "trigger_pc": "0x1448",
+      "samples": 128,
+      "retired": 45,
+      "ipc": 0.3515625,
+      "cpi": 2.8444444444444446,
+      "load_dependency": 0,
+      "mem_wait": 77,
+      "branch_redirect": 2,
+      "data_req": 15,
+      "data_resp": 16
+    },
+    {
+      "algorithm": "core_state_transition",
+      "trigger_pc": "0x1c7c",
+      "samples": 128,
+      "retired": 32,
+      "ipc": 0.25,
+      "cpi": 4.0,
+      "load_dependency": 2,
+      "mem_wait": 8,
+      "branch_redirect": 3,
+      "data_req": 2,
+      "data_resp": 2
+    },
+    {
+      "algorithm": "crcu16",
+      "trigger_pc": "0x2178",
+      "samples": 128,
+      "retired": 58,
+      "ipc": 0.453125,
+      "cpi": 2.206896551724138,
+      "load_dependency": 0,
+      "mem_wait": 0,
+      "branch_redirect": 0,
+      "data_req": 0,
+      "data_resp": 0
+    }
+  ]
+}

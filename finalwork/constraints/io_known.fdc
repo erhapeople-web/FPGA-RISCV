@@ -1,0 +1,14 @@
+# Only proven interface structure is constrained here. No numeric external
+# camera/HDMI/DDR AC budget is inferred from a pin-position drawing.
+# UART RX and I2C SDA are asynchronous to cpu_clk. Cut only the first D;
+# the second synchronizer stage and every downstream path remain timed.
+# CPU-load mode restores the normal physical UART RX. Only the first input
+# synchronizer D is asynchronous; first-Q to second-D remains timed.
+set_false_path -from [get_ports uart_rxd] -to [get_pins -hierarchical -regexp {^u_soc/u_memory/u_uart/rx_meta/D\[0\]$}]
+# Camera/HDMI configuration is active in this candidate. Their exact SDA
+# pad-to-first-D boundaries are supplied by ai_camera.fdc; the following
+# second-stage paths remain timed. No external DVP/HDMI AC budget is implied.
+
+# The real forwarded clock at the FPGA package boundary. Its downstream
+# receiver edge/setup/hold and trace skew are separate budget inputs.
+create_generated_clock -name hdmi_pclk_out -source [get_pins u_video_clock/u_pix_pll/CLKOUT0] -master_clock [get_clocks pix_clk] -divide_by 1 [get_ports pix_clk]

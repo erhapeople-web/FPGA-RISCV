@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "firmware_sha256": "415c3908b29f326b0dcef84cea0de3b1b6a12ba23627b1174d176ed6541fe945",
+  "testbench_sha256": "00818a1426d922143143e10d3f9df43abcfd1ece8f2d769bb6712afab511e704",
+  "log_sha256": "99321500a6b6a4baac5dd22cb956d0c0c05847ea3b8d762734f21e2b6ad9d61b",
+  "hardware_access": false,
+  "scope": "New production ROM on original CPU/Cache/AXI/UART RTL; startup, STATUS, rejected RUN, zero camera/DDR accesses. No CoreMark/AI/board claim"
+}

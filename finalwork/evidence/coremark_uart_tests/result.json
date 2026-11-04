@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "tests": 20,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Synthetic P/V CRC/nonce/transport and current pre-program UART capture/ownership/execution-state controls; no benchmark or device",
+  "process_creation_prohibited": true,
+  "hardware_access": false,
+  "coremark_algorithm_executed": false,
+  "source_sha256": {
+    "E:\\study1\\FPGA\\branch\\J5_CM2506\\host\\coremark_uart_parser.py": "ecc5913f828e22d335a8db270693621fce67f7a2eefda7f239011085fa513ff6",
+    "E:\\study1\\FPGA\\branch\\J5_CM2506\\host\\coremark_uart_case.py": "1d96f98e5ae60ad17ab9908386805a54d2eaf7358b0c4bdf6b112624b8a10a9d",
+    "E:\\study1\\FPGA\\branch\\J5_CM2506\\host\\coremark_workload.py": "82e0b589d73ff0db48f6f4af297bd7c9ce3e9446aa5aa28274256747474bf72a",
+    "E:\\study1\\FPGA\\branch\\J5_CM2506\\tools\\run_ai_camera_board.py": "a0c4bbc67e4d5f3e5dd941f3e90df9542710f249eaa15d9ebe193c6e75d7b64d",
+    "E:\\study1\\FPGA\\branch\\J5_CM2506\\sim\\coremark_host\\run_tests.py": "769979857554dbbf1b59ff1da493cf2bea9db2dfb10b33e73a901a73ac5447c7",
+    "E:\\study1\\FPGA\\branch\\J5_CM2506\\sim\\ai_board_control\\test_ai_board_control.py": "d94b718260cd7517ed0a015fdb1857ecddfef6906823ad8ea5aaa340d57fb71d",
+    "E:\\study1\\FPGA\\branch\\J5_CM2506\\sim\\coremark_host\\test_coremark_uart_case.py": "ccba531ef8166525658ccd370914a936b4b195406ada83080f9eadf90eb15ba1",
+    "E:\\study1\\FPGA\\branch\\J5_CM2506\\sim\\coremark_host\\test_current_integration.py": "50dd2556a329ea80c85e5ff1e9c20058e4ef83fde390f9b331cbb8e51ab51c01",
+    "E:\\study1\\FPGA\\branch\\J5_CM2506\\sim\\coremark_host\\fixtures\\test_uart_parser.py": "d5ce4bfbd57e00e82e8d9341fa37e49778209dcbe058e514427067a12bade886",
+    "E:\\study1\\FPGA\\branch\\J5_CM2506\\sim\\coremark_host\\fixtures\\uart_parser.py": "ecc5913f828e22d335a8db270693621fce67f7a2eefda7f239011085fa513ff6"
+  },
+  "log_path": "E:\\study1\\FPGA\\branch\\J5_CM2506\\evidence\\coremark_uart_tests\\tests.log",
+  "log_sha256": "891151695550f2c32304f58a57eeaa5a571e4aeff2a1d5909ef1dcd55056c74c"
+}

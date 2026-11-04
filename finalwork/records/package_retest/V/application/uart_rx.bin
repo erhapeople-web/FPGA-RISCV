@@ -1,0 +1,21 @@
+J5_COREMARK_READY V=1 SEQ=00000000 SOURCE_ID=07b7f5a7855dc267d61c692e69655f4c89158117461adfc2f6d55c9cbce16e47 CPU_HZ=100000000 ITERATIONS=5000 DATA_SIZE=2000 ISA=RV32I COMMAND_BYTES=32
+CM5_BEGIN SEQ=00000001 MODE=V NONCE=02f95af7
+CM5_SEEDS SEQ=00000002 MODE=V NONCE=02f95af7 SEED1=00003415 SEED2=00003415 SEED3=00000066 SEED4=00001388 SEED5=00000000 CPU_HZ=100000000 ITERATIONS=5000
+2K validation run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 2077410668
+Total time (secs): 20
+Iterations/Sec   : 250
+Iterations       : 5000
+Compiler version : GCC 15.2.0
+Compiler flags   : -march=rv32i -mabi=ilp32 -O2 -ffreestanding -fno-builtin -fno-pic -msmall-data-limit=0 -ffunction-sections -fdata-sections -fno-tree-loop-distribute-patterns -DITERATIONS=5000 -DVALIDATION_RUN=0 -DTOTAL_DATA_SIZE=2000
+Memory location  : STATIC SRAM
+seedcrc          : 0x18f2
+[0]crclist       : 0xe3c1
+[0]crcmatrix     : 0x0747
+[0]crcstate      : 0x8d84
+[0]crcfinal      : 0xf440
+Correct operation validated. See README.md for run and reporting rules.
+EXACT_CYCLES_HEX=000000007bd2c56c CPU_HZ=100000000 ITERATIONS=5000 SEQ=00000003 MODE=V NONCE=02f95af7
+CACHE_COUNTERS IC_ACCESS=4c383481 IC_MISS=00000332 DC_ACCESS=1b967b3a DC_MISS=00066e53
+AI_CPU_COREMARK_FINISHED SEQ=00000004 MODE=V NONCE=02f95af7 RETURN=00000000

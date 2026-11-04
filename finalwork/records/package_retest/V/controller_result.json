@@ -1,0 +1,211 @@
+{
+  "passed": true,
+  "scope": "J5_AI_CAMERA_COREMARK_20261102",
+  "cleanup": {
+    "source": "controller",
+    "status": {
+      "raw": "0x00180c80",
+      "over_temp": false,
+      "done": false,
+      "done_i": false,
+      "crc_error": false,
+      "id_error": false,
+      "mapping": "Logos2 Configuration Guide table16"
+    },
+    "sram_clear_verified": true,
+    "thermal_pass": null
+  },
+  "native_clients_stopped_before_reset": true,
+  "actual_temperature_collected": false,
+  "thermal_pass": null,
+  "flash_written": false,
+  "coremark_executed": true,
+  "PC_inference_executed": false,
+  "automatic_program_retries": 0,
+  "automatic_RUN_retries": 0,
+  "baseline": {
+    "raw": "0x00180c80",
+    "over_temp": false,
+    "done": false,
+    "done_i": false,
+    "crc_error": false,
+    "id_error": false,
+    "mapping": "Logos2 Configuration Guide table16"
+  },
+  "program_status": {
+    "raw": "0x001ffca0",
+    "over_temp": false,
+    "done": true,
+    "done_i": true,
+    "crc_error": false,
+    "id_error": false,
+    "mapping": "Logos2 Configuration Guide table16"
+  },
+  "workload": {
+    "passed": true,
+    "mode": "V",
+    "nonce": 49896183,
+    "source_id": "07b7f5a7855dc267d61c692e69655f4c89158117461adfc2f6d55c9cbce16e47",
+    "scope": "CPU-UART transcript conditions only; caller must separately bind a real board, image and protected run",
+    "benchmark_requested": true,
+    "coremark_executed": true,
+    "board_tested": false,
+    "command_attempted": true,
+    "automatic_retries": 0,
+    "AI_RUN_sent": false,
+    "data_location": "local SRAM through active D-Cache; physical DDR tested separately",
+    "started_local": "2026-11-03T13:47:58.566838",
+    "cpu_hz": 100000000,
+    "iterations": 5000,
+    "cycles": 2077410668,
+    "seconds": 20.77410668,
+    "coremark": 240.6842362475054,
+    "coremark_per_mhz": 2.406842362475054,
+    "crc": {
+      "seedcrc": "18f2",
+      "crclist": "e3c1",
+      "crcmatrix": "0747",
+      "crcstate": "8d84",
+      "crcfinal": "f440"
+    },
+    "kernel_crc_independent_constants_checked": true,
+    "crcfinal_independent_5000_reference_checked": false,
+    "cache_counters": {
+      "ic_access": 1278751873,
+      "ic_miss": 818,
+      "dc_access": 462846778,
+      "dc_miss": 421459
+    },
+    "status": "strict_CPU_UART_result_accepted",
+    "finished_local": "2026-11-03T13:48:19.642374",
+    "elapsed_seconds": 21.075547899999947,
+    "records_accepted": 21,
+    "received_bytes": 1313,
+    "evidence_sha256": {
+      "events.jsonl": "0ef480b17d3043a29bd4ddd578fe042454443f43a79a7e452866c83a6d87007a",
+      "uart_rx.bin": "5961af56b02d43d6d89d0c9197d1569e8dbc58d7fd5d253b4c7946963759c163",
+      "uart_tx.bin": "1e106c85e73b64d8a22f703feaf46583c87ced28adb9a25c5a977d9bffe67027"
+    },
+    "host_inference_used": false,
+    "golden_boxes_sent": false,
+    "same_hardware_as_current_AI_delivery": true,
+    "UART_baud": 921600
+  },
+  "result_display": {
+    "started_monotonic": 2994.4975314,
+    "planned_seconds": 0.0,
+    "deadline_seconds_unchanged": 285.0,
+    "reserved_cleanup_seconds": 23.0,
+    "observed_seconds": 0.005041400000209251
+  },
+  "UART_stop": {
+    "closed": true,
+    "reader_stopped": true
+  },
+  "OT_stop": {
+    "stopped": true,
+    "thread_stopped": true,
+    "native_clients_stopped": true,
+    "children": [
+      {
+        "label": "ot_poll_00000",
+        "stopped": true,
+        "pid": 44176,
+        "completion_verified": true,
+        "pid_reused": false,
+        "foreign_process_touched": false,
+        "returncode": 0,
+        "original_create_time": 1793684878.6136873,
+        "reason": "recorded_exit_and_process_absent"
+      },
+      {
+        "label": "ot_poll_00001",
+        "stopped": true,
+        "pid": 4016,
+        "completion_verified": true,
+        "pid_reused": false,
+        "foreign_process_touched": false,
+        "returncode": 0,
+        "original_create_time": 1793684888.6347516,
+        "reason": "recorded_exit_and_process_absent"
+      },
+      {
+        "label": "ot_poll_00002",
+        "stopped": true,
+        "pid": 35528,
+        "completion_verified": true,
+        "pid_reused": false,
+        "foreign_process_touched": false,
+        "returncode": 0,
+        "original_create_time": 1793684898.6274595,
+        "reason": "recorded_exit_and_process_absent"
+      }
+    ],
+    "sample_count": 3,
+    "fault": null,
+    "ever_ready": true,
+    "started": true,
+    "normal_completion_requested": true,
+    "natural_completion_verified": true,
+    "waited_seconds": 7.400668199999927
+  },
+  "native_clients_stop": {
+    "stopped": true,
+    "children": [
+      {
+        "stopped": true,
+        "pid": 25568,
+        "completion_verified": true,
+        "pid_reused": false,
+        "foreign_process_touched": false,
+        "returncode": 0,
+        "original_create_time": 1793684852.4471965,
+        "reason": "recorded_exit_and_process_absent"
+      },
+      {
+        "stopped": true,
+        "pid": 44176,
+        "completion_verified": true,
+        "pid_reused": false,
+        "foreign_process_touched": false,
+        "returncode": 0,
+        "original_create_time": 1793684878.6136873,
+        "reason": "recorded_exit_and_process_absent"
+      },
+      {
+        "stopped": true,
+        "pid": 4016,
+        "completion_verified": true,
+        "pid_reused": false,
+        "foreign_process_touched": false,
+        "returncode": 0,
+        "original_create_time": 1793684888.6347516,
+        "reason": "recorded_exit_and_process_absent"
+      },
+      {
+        "stopped": true,
+        "pid": 35528,
+        "completion_verified": true,
+        "pid_reused": false,
+        "foreign_process_touched": false,
+        "returncode": 0,
+        "original_create_time": 1793684898.6274595,
+        "reason": "recorded_exit_and_process_absent"
+      },
+      {
+        "stopped": true,
+        "pid": 42668,
+        "completion_verified": true,
+        "pid_reused": false,
+        "foreign_process_touched": false,
+        "returncode": 0,
+        "original_create_time": 1793684861.0117123,
+        "reason": "recorded_exit_and_process_absent"
+      }
+    ]
+  },
+  "sram_clear_verified": true,
+  "program_started_monotonic": 2955.7962131,
+  "finished_monotonic": 3012.9000648,
+  "state": "completed"
+}

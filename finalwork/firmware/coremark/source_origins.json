@@ -1,0 +1,84 @@
+{
+  "upstream_url": "https://github.com/eembc/coremark",
+  "upstream_commit": "1f483d5b8316753a742cbf5590caf5bd0a4e4777",
+  "license": "Apache-2.0",
+  "origins": {
+    "upstream\\core_main.c": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\third_party\\coremark\\core_main.c",
+      "sha256": "c240afdd1bda84af55643ca812fcbb0dd52063a7bae2ebf12f5fc12e487328ff",
+      "role": "unchanged official source or upstream metadata"
+    },
+    "upstream\\core_list_join.c": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\third_party\\coremark\\core_list_join.c",
+      "sha256": "cb85efa5ca7e8537ce90fdce8c13fc01de0457a162fc44ceba5e300e97306418",
+      "role": "unchanged official source or upstream metadata"
+    },
+    "upstream\\core_matrix.c": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\third_party\\coremark\\core_matrix.c",
+      "sha256": "247761a5bfd88868e4fba4b56646512f03a74ba6d35011b9bf902854f078e98b",
+      "role": "unchanged official source or upstream metadata"
+    },
+    "upstream\\core_state.c": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\third_party\\coremark\\core_state.c",
+      "sha256": "b3e36c4dee73824c36261dd2f405bbd4e49f9eb94dd5bc2dfbd0e17ab3b3c028",
+      "role": "unchanged official source or upstream metadata"
+    },
+    "upstream\\core_util.c": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\third_party\\coremark\\core_util.c",
+      "sha256": "166e9bf09afd290adffe2c6681d913c18373f77e457fae258499fbaad10b04fc",
+      "role": "unchanged official source or upstream metadata"
+    },
+    "upstream\\coremark.h": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\third_party\\coremark\\coremark.h",
+      "sha256": "0c6655620a7fb984a0f9a69b90e6fb0626694535971abfb3ca0eb88422cbeab0",
+      "role": "unchanged official source or upstream metadata"
+    },
+    "upstream\\LICENSE.md": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\third_party\\coremark\\LICENSE.md",
+      "sha256": "0d92a0727423e27165852685d45d9f111a071dcba594454d7edbac48c28e4490",
+      "role": "unchanged official source or upstream metadata"
+    },
+    "upstream\\README.md": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\third_party\\coremark\\README.md",
+      "sha256": "984939cc59c9ea0abd482d20fbdee8acc3c3b4d41abf4101d78ca6970cebc2d1",
+      "role": "unchanged official source or upstream metadata"
+    },
+    "upstream\\UPSTREAM_REVISION": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\third_party\\coremark\\UPSTREAM_REVISION",
+      "sha256": "9ced85a149c130008af55cfd021d85a8f0c92fd55834c5e65e190b45e4d88fa6",
+      "role": "unchanged official source or upstream metadata"
+    },
+    "reference\\core_portme.c": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\firmware\\coremark\\core_portme.c",
+      "sha256": "3b297b59fb098944bd51eb66dcf1126b3ad61855627fb3361d6774e21380c44b",
+      "role": "unchanged independent R2 port reference"
+    },
+    "reference\\core_portme.h": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\firmware\\coremark\\core_portme.h",
+      "sha256": "5c2861692ae1972e3a40fd9a1701eda482373769e0ec84cefd74aa2aadade4ab",
+      "role": "unchanged independent R2 port reference"
+    },
+    "reference\\soft_arithmetic.c": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\firmware\\coremark\\soft_arithmetic.c",
+      "sha256": "e6541d0d2063fdd0e4c070d4f89566b94213e8e9fa5a6cf71a9fb70d6cd52b67",
+      "role": "unchanged independent R2 port reference"
+    },
+    "reference\\start.S": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\firmware\\start.S",
+      "sha256": "a7bfa9edcda6a02a1d04dc739159a9acf330da84b52e848c69770cf5e9f4e7f6",
+      "role": "unchanged independent R2 port reference"
+    },
+    "reference\\link.ld": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\firmware\\link.ld",
+      "sha256": "bb704a1f949291f1dc46343b0d81269decbcccebbb82441560147487a5338688",
+      "role": "unchanged independent R2 port reference"
+    },
+    "reference\\platform.h": {
+      "source": "E:\\study1\\FPGA\\AI_cpu_latest_20261021\\variants\\cache_perf_timing_r2_20261025\\firmware\\platform.h",
+      "sha256": "fc96a40f622e80067f3c0cb967f0d127e2585e88ac256beee75f18d43c29bb2d",
+      "role": "unchanged independent R2 port reference"
+    }
+  },
+  "hardware_access": false,
+  "benchmark_executed": false
+}

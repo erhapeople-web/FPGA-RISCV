@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "name": "run_before_admission",
+      "detected": true,
+      "returncode": 10,
+      "mutated_source_sha256": "153b46d16ff0e405e0e13e5464df7d7b10f7f9795b9d2da0e399db107d016df4"
+    },
+    {
+      "name": "custom_header_bypass",
+      "detected": true,
+      "returncode": 10,
+      "mutated_source_sha256": "cd3b3f8de88014912c05be0e70aeb7fc80a8f4fae760c6fd92ab98b638857e1d"
+    }
+  ],
+  "hardware_access": false
+}
